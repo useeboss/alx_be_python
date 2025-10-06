@@ -1,27 +1,12 @@
-# match_case_calculator.py
-# A simple calculator using match-case to perform basic arithmetic operations
+# Enhanced multiplication_table.py
+# Generates multiplication tables for a range of numbers using nested loops
 
-# Prompt user for input
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-operation = input("Choose the operation (+, -, *, /): ").strip()
+# Prompt user for starting and ending numbers
+start = int(input("Enter the starting number for the multiplication table: "))
+end = int(input("Enter the ending number for the multiplication table: "))
 
-# Perform calculation using match-case
-match operation:
-    case '+':
-        result = num1 + num2
-        print(f"The result is {result}.")
-    case '-':
-        result = num1 - num2
-        print(f"The result is {result}.")
-    case '*':
-        result = num1 * num2
-        print(f"The result is {result}.")
-    case '/':
-        if num2 == 0:
-            print("Cannot divide by zero.")
-        else:
-            result = num1 / num2
-            print(f"The result is {result}.")
-    case _:
-        print("Invalid operation selected.")
+# Loop through each number in the range
+for number in range(start, end + 1):
+    print(f"\nMultiplication table for {number}:")
+    for i in range(1, 11):
+        print(f"{number} * {i} = {number * i}")
