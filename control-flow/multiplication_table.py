@@ -1,12 +1,9 @@
-# Enhanced multiplication_table.py
-# Generates multiplication tables for a range of numbers using nested loops
+# multiplication_table.py
+# This script prints the multiplication table for a given number using a for loop.
 
-# Prompt user for starting and ending numbers
-start = int(input("Enter the starting number for the multiplication table: "))
-end = int(input("Enter the ending number for the multiplication table: "))
+# Prompt the user for a number with the exact required input string
+number = int(input("Enter a number to see its multiplication table:"))
 
-# Loop through each number in the range
-for number in range(start, end + 1):
-    print(f"\nMultiplication table for {number}:")
-    for i in range(1, 11):
-        print(f"{number} * {i} = {number * i}")
+# Use a for loop to generate and print the multiplication table from 1 to 10
+for i in range(1, 11):
+    print(f"{number} * {i} = {number * i}")
